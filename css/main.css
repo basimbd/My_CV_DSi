@@ -8,8 +8,6 @@ a {
   clear:both;
   display:block;
   width: 100%;
-  /*background-color: #0f314c;*/
-  /*height: 2px;*/
 }
 
 .solid-hr {
@@ -26,6 +24,8 @@ a {
   margin-right: 3%;
 }
 
+
+/*============================ MAIN SECTIONS ============================*/
 .container{
   display: flex;
   position: relative;
@@ -65,6 +65,7 @@ a {
   background: #dedede;
 }
 
+/*============================ PHOTO STYLING============================*/
 .photo-div{
   margin: 5% 5%;
 }
@@ -78,13 +79,17 @@ a {
   object-fit: cover;
 }
 
-.contact-div{
+
+/*============================ COLUMN FLOWING FLEX ============================*/
+.flex-column-div{
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
+  flex-grow: 1;
   margin: 5% 5%;
 }
 
-.contact-div > ul{
+
+.flex-column-div > ul{
   display: flex;
   flex-flow: column wrap;
   /*align-content: space-evenly;*/
@@ -93,11 +98,11 @@ a {
   list-style: none;
 }
 
-.contact-div > ul > li{
+.flex-column-div > ul > li{
   text-align: left;
 }
 
-.contact-div > ul > li > a{
+.flex-column-div > ul > li > a{
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -106,25 +111,14 @@ a {
   font-family: cursive;
 }
 
-.contact-div > ul > li > a:hover{
+.flex-column-div > ul > li > a:hover{
   background: #5485dc;
 }
 
-.contact-div > ul > li > i {
+.flex-column-div > ul > li > i {
   width: 16px;
   margin-right: 3%;
 }
-
-.flex-column-div{
-  display: flex;
-  flex-flow: column nowrap;
-  flex-grow: 1;
-  margin: 5% 5%;
-}
-
-/*.flex-column-div .flex-column-div{*/
-/*  margin: 0 5%;*/
-/*}*/
 
 .flex-column-div > h2 {
   font-family: 'Encode Sans SC', sans-serif;
@@ -147,12 +141,15 @@ a {
   color: #5485dc;
 }
 
+
+/*============================ ROW FLOWING FLEX ============================*/
 .flex-row-div{
   display: flex;
   flex-flow: row wrap;
   margin: 5% 5%;
 }
 
+/*============================ CARD TEMPLATE ============================*/
 .card {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -166,6 +163,8 @@ a {
   font-family: 'Arial', sans-serif;
 }
 
+
+/* ============================ GENERALIZING ATTRIBUTES ============================*/
 .no-top-margin{
   margin-top: 0;
 }
@@ -188,6 +187,8 @@ a {
   margin-left: auto;
 }
 
+
+/*============================ DEVICE RESPONSIVE ============================*/
 @media all and (max-width: 720px){
   .intro-sidebar{
     flex: 1;
